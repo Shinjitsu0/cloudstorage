@@ -1,0 +1,101 @@
+2022-01-09 13:13:10.070  INFO 34392 --- [main] ru.netology.demo.CloudStorage            : Starting CloudStorage using Java 16.0.2 on KERNEL_PANIC with PID 34392 (C:\Users\Shinj\Desktop\11\cloudstorage\target\classes started by Shinjitsu in C:\Users\Shinj\Desktop\11\cloudstorage)
+2022-01-09 13:13:10.074  INFO 34392 --- [main] ru.netology.demo.CloudStorage            : No active profile set, falling back to default profiles: default
+2022-01-09 13:13:10.422  WARN 34392 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-01-09 13:13:10.825  INFO 34392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-09 13:13:10.827  INFO 34392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-01-09 13:13:10.856  INFO 34392 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.netology.demo.repository.FileRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-01-09 13:13:10.857  INFO 34392 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.netology.demo.repository.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-01-09 13:13:10.858  INFO 34392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 0 JDBC repository interfaces.
+2022-01-09 13:13:10.866  INFO 34392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-09 13:13:10.867  INFO 34392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-09 13:13:10.893  INFO 34392 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 2 JPA repository interfaces.
+2022-01-09 13:13:11.119  INFO 34392 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@78010562' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-09 13:13:11.124  INFO 34392 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-09 13:13:11.292  INFO 34392 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2022-01-09 13:13:11.298  INFO 34392 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-09 13:13:11.298  INFO 34392 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-01-09 13:13:11.360  INFO 34392 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-09 13:13:11.360  INFO 34392 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1219 ms
+2022-01-09 13:13:11.382  INFO 34392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-09 13:13:11.463  INFO 34392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-09 13:13:11.466  INFO 34392 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:db'
+2022-01-09 13:13:11.546  INFO 34392 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-09 13:13:11.587  INFO 34392 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.31.Final
+2022-01-09 13:13:11.685  INFO 34392 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-09 13:13:11.757  INFO 34392 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-09 13:13:12.190  INFO 34392 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-09 13:13:12.194  INFO 34392 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-09 13:13:12.498  WARN 34392 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webSecurityConfig' defined in file [C:\Users\Shinj\Desktop\11\cloudstorage\target\classes\ru\netology\demo\cloudConfiguration\WebSecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'webSecurityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference?
+2022-01-09 13:13:12.499  INFO 34392 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-01-09 13:13:12.500  INFO 34392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-01-09 13:13:12.501  INFO 34392 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-01-09 13:13:12.502  INFO 34392 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-01-09 13:13:12.508  INFO 34392 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-09 13:13:12.515 ERROR 34392 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The dependencies of some of the beans in the application context form a cycle:
+
+┌──->──┐
+|  webSecurityConfig defined in file [C:\Users\Shinj\Desktop\11\cloudstorage\target\classes\ru\netology\demo\cloudConfiguration\WebSecurityConfig.class]
+└──<-──┘
+
+
+2022-01-09 13:13:52.964  INFO 36564 --- [main] ru.netology.demo.CloudStorage            : Starting CloudStorage using Java 16.0.2 on KERNEL_PANIC with PID 36564 (C:\Users\Shinj\Desktop\11\cloudstorage\target\classes started by Shinjitsu in C:\Users\Shinj\Desktop\11\cloudstorage)
+2022-01-09 13:13:52.966  INFO 36564 --- [main] ru.netology.demo.CloudStorage            : No active profile set, falling back to default profiles: default
+2022-01-09 13:13:53.116  WARN 36564 --- [background-preinit] o.s.h.c.j.Jackson2ObjectMapperBuilder    : For Jackson Kotlin classes support please add "com.fasterxml.jackson.module:jackson-module-kotlin" to the classpath
+2022-01-09 13:13:53.343  INFO 36564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-09 13:13:53.344  INFO 36564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2022-01-09 13:13:53.360  INFO 36564 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.netology.demo.repository.FileRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-01-09 13:13:53.361  INFO 36564 --- [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface ru.netology.demo.repository.UserRepository. If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2022-01-09 13:13:53.362  INFO 36564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 0 JDBC repository interfaces.
+2022-01-09 13:13:53.366  INFO 36564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-01-09 13:13:53.366  INFO 36564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-01-09 13:13:53.383  INFO 36564 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 2 JPA repository interfaces.
+2022-01-09 13:13:53.530  INFO 36564 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1702830d' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-09 13:13:53.533  INFO 36564 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-01-09 13:13:53.656  INFO 36564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2022-01-09 13:13:53.660  INFO 36564 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-09 13:13:53.660  INFO 36564 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-01-09 13:13:53.719  INFO 36564 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-09 13:13:53.720  INFO 36564 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 726 ms
+2022-01-09 13:13:53.737  INFO 36564 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-01-09 13:13:53.790  INFO 36564 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-01-09 13:13:53.793  INFO 36564 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:db'
+2022-01-09 13:13:53.853  INFO 36564 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-01-09 13:13:53.875  INFO 36564 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.31.Final
+2022-01-09 13:13:53.926  INFO 36564 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-01-09 13:13:53.971  INFO 36564 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-01-09 13:13:54.284  INFO 36564 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-01-09 13:13:54.288  INFO 36564 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-01-09 13:13:54.528  WARN 36564 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-01-09 13:13:54.725  INFO 36564 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6cd6698b, org.springframework.security.web.context.SecurityContextPersistenceFilter@66a93b25, org.springframework.security.web.header.HeaderWriterFilter@54033a65, org.springframework.web.filter.CorsFilter@5ac7550a, org.springframework.security.web.authentication.logout.LogoutFilter@1978b0d5, ru.netology.demo.configJwt.JwtRequestFilter@58ac0823, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3186f8f5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40b8158d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@44dcc0e4, org.springframework.security.web.session.SessionManagementFilter@46590dd0, org.springframework.security.web.access.ExceptionTranslationFilter@690e4b00, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@47666b39]
+2022-01-09 13:13:55.081  INFO 36564 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2022-01-09 13:13:55.088  INFO 36564 --- [main] ru.netology.demo.CloudStorage            : Started CloudStorage in 2.33 seconds (JVM running for 2.716)
+2022-01-09 13:13:55.088  INFO 36564 --- [main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2022-01-09 13:13:55.132  INFO 36564 --- [main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2022-01-09 13:14:37.170  INFO 36564 --- [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-09 13:14:37.170  INFO 36564 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-09 13:14:37.171  INFO 36564 --- [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-01-09 13:14:37.204  WARN 36564 --- [http-nio-8085-exec-2] r.n.demo.configJwt.JwtRequestFilter      : JWT Token does not begin with Bearer String
+2022-01-09 13:14:37.268  INFO 36564 --- [http-nio-8085-exec-2] r.n.demo.controller.LoginController      : Login attempt. ip:0:0:0:0:0:0:0:1 hostname:0:0:0:0:0:0:0:1 User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 YaBrowser/21.11.4.727 Yowser/2.5 Safari/537.36
+2022-01-09 13:14:37.328  INFO 36564 --- [http-nio-8085-exec-2] r.n.demo.controller.LoginController      : Successful login. Access granted for user: admin. token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY0MTc0MTI3NywiaWF0IjoxNjQxNzIzMjc3fQ.EwrNGwAl_87eJ1tmeFwjdXRYQHdWvXN7JY12OxCJsZmCv9zaWuWXeROW9qVYMldTAQzKxnutXrYAl_sTyOQUZg
+2022-01-09 13:14:37.365  WARN 36564 --- [http-nio-8085-exec-4] r.n.demo.configJwt.JwtRequestFilter      : JWT Token does not begin with Bearer String
+2022-01-09 13:14:37.368  INFO 36564 --- [http-nio-8085-exec-4] r.n.demo.controller.FileController       : Viewing files attempt. ip:0:0:0:0:0:0:0:1 hostname:0:0:0:0:0:0:0:1 User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 YaBrowser/21.11.4.727 Yowser/2.5 Safari/537.36
+2022-01-09 13:14:37.378  INFO 36564 --- [http-nio-8085-exec-4] r.n.demo.controller.FileController       : Successful viewing attempt. Access granted for user: admin
+2022-01-09 13:15:43.004  WARN 36564 --- [http-nio-8085-exec-10] r.n.demo.configJwt.JwtRequestFilter      : JWT Token does not begin with Bearer String
+2022-01-09 13:15:43.005  INFO 36564 --- [http-nio-8085-exec-10] r.n.demo.controller.LogoutController     : Exit attempt. ip:0:0:0:0:0:0:0:1 hostname:0:0:0:0:0:0:0:1 User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 YaBrowser/21.11.4.727 Yowser/2.5 Safari/537.36
+2022-01-09 13:15:43.010  INFO 36564 --- [http-nio-8085-exec-10] r.n.demo.controller.LogoutController     : Successful logout. User admin has logged out
+2022-01-09 13:15:48.150  WARN 36564 --- [http-nio-8085-exec-2] r.n.demo.configJwt.JwtRequestFilter      : JWT Token does not begin with Bearer String
+2022-01-09 13:15:48.152  INFO 36564 --- [http-nio-8085-exec-2] r.n.demo.controller.LoginController      : Login attempt. ip:0:0:0:0:0:0:0:1 hostname:0:0:0:0:0:0:0:1 User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 YaBrowser/21.11.4.727 Yowser/2.5 Safari/537.36
+2022-01-09 13:15:48.155  INFO 36564 --- [http-nio-8085-exec-2] r.n.demo.controller.LoginController      : Successful login. Access granted for user: user. token: eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNjQxNzQxMzQ4LCJpYXQiOjE2NDE3MjMzNDh9.R88TQ0mshuLsfX_e-Vt0kE0DHd3bLwWksBf6lAMwqO4h9UIigPnQgZFnHMdnAEx53T7jGgCA_IIG6hSv4j8V-w
+2022-01-09 13:15:48.172  WARN 36564 --- [http-nio-8085-exec-4] r.n.demo.configJwt.JwtRequestFilter      : JWT Token does not begin with Bearer String
+2022-01-09 13:15:48.173  INFO 36564 --- [http-nio-8085-exec-4] r.n.demo.controller.FileController       : Viewing files attempt. ip:0:0:0:0:0:0:0:1 hostname:0:0:0:0:0:0:0:1 User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.85 YaBrowser/21.11.4.727 Yowser/2.5 Safari/537.36
+2022-01-09 13:15:48.175  INFO 36564 --- [http-nio-8085-exec-4] r.n.demo.controller.FileController       : Successful viewing attempt. Access granted for user: user
