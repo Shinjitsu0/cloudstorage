@@ -1,4 +1,4 @@
-package ru.netology.demo.configJwt;
+package ru.netology.demo.security;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;

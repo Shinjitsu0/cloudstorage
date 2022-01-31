@@ -1,16 +1,11 @@
 package ru.netology.demo.service;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import ru.netology.demo.configJwt.JwtTokenUtil;
 import ru.netology.demo.model.IncomingFile;
 import ru.netology.demo.repository.FileRepository;
-
-
-import javax.servlet.http.HttpServletRequest;
-import javax.transaction.Transactional;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.List;
@@ -20,21 +15,17 @@ import java.util.UUID;
 @Service
 public class FileService {
 
-    @Autowired
-    private FileRepository fileRepository;
+    private final FileRepository fileRepository;
+    private final UserService userService;
 
-    @Autowired
-    private UserService userService;
+    public FileService(FileRepository fileRepository, UserService userService) {
+        this.fileRepository = fileRepository;
+        this.userService = userService;
+    }
 
-    @Autowired
-    private JwtTokenUtil jwtTokenUtil;
-
-    @Transactional(rollbackOn = IOException.class)//в случае падения IOException, все наши сохранения в БД откатятся?
-    public void upload(MultipartFile resource, HttpServletRequest request) throws IOException {
-        String tokenRaw = request.getHeader("auth-token");
-        var usernameFromToken = jwtTokenUtil.getUserNameFromTokenRaw(tokenRaw);
-        var user = userService.getUserByLoginReturnUser(usernameFromToken);
-
+    public void upload(MultipartFile resource) throws IOException {
+        var login = SecurityContextHolder.getContext().getAuthentication().getName();
+        var user = userService.getUserByLoginReturnUser(login);
         IncomingFile file = IncomingFile.builder()
                 .filename(resource.getOriginalFilename())
                 .key(UUID.randomUUID().toString())
@@ -42,14 +33,14 @@ public class FileService {
                 .uploadDate(LocalDate.now())
                 .fileType(resource.getContentType())
                 .fileContent(resource.getInputStream().readAllBytes())
-                .user(user)
+                .userDB(user)
                 .build();
         fileRepository.save(file);
     }
 
     public IncomingFile download(String filename) {
         Optional<IncomingFile> file = fileRepository.findByFilename(filename);
-        return file.isPresent() ? file.get() : null;
+        return file.orElse(null);
     }
 
     public void delete(String filename, String username) {

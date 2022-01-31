@@ -14,7 +14,7 @@ import java.util.List;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class User implements Serializable {
+public class UserDB implements Serializable {
     @Id
     private String login;
     @Column

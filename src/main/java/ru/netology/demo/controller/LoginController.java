@@ -7,13 +7,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RestController;
-import ru.netology.demo.configJwt.JwtTokenUtil;
-import ru.netology.demo.model.User;
+import ru.netology.demo.security.JwtTokenUtil;
+import ru.netology.demo.model.UserDB;
 import ru.netology.demo.service.UserService;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
+
 
 @RestController
 public class LoginController {
@@ -30,22 +31,19 @@ public class LoginController {
     }
 
     @PostMapping(value = "/login")
-    public ResponseEntity<?> createAuthenticationToken(@RequestBody User user, HttpServletRequest request) {
+    public ResponseEntity<?> createAuthenticationToken(@RequestBody UserDB userDB,
+                                                       @RequestHeader("User-Agent") String useragent, HttpServletRequest request) {
         var ip = request.getRemoteAddr();
         var hostname = request.getRemoteHost();
-        var useragent = request.getHeader("User-Agent");
         log.info("Login attempt. ip:" + ip + " hostname:" + hostname + " User-Agent:" + useragent);
-
-        //check request data with db
-        final UserDetails userDetails = userService.getUserByLogin(user.getLogin());
+        final UserDetails userDetails = userService.getUserByLogin(userDB.getLogin());
         if (userDetails != null) {
             var name = userDetails.getUsername();
             var pass = userDetails.getPassword();
-
-            if (name.equals(user.getLogin()) && pass.equals(user.getPassword())) {
+            if (name.equals(userDB.getLogin()) && pass.equals(userDB.getPassword())) {
                 final String token = jwtTokenUtil.generateToken(userDetails);
-                userService.addTokenToUser(user.getLogin(), token);
-                log.info("Successful login. Access granted for user: " + user.getLogin() + ". token: " + token);
+                userService.addTokenToUser(userDB.getLogin(), token);
+                log.info("Successful login. Access granted for user: " + userDB.getLogin() + ". token: " + token);
                 HashMap<String, String> map = new HashMap<>();
                 map.put("auth-token", token);
                 return ResponseEntity.status(200).body(map);

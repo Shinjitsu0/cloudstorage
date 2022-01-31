@@ -1,4 +1,4 @@
-package ru.netology.demo.configJwt;
+package ru.netology.demo.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
@@ -24,10 +24,6 @@ public class JwtTokenUtil implements Serializable {
 
     public String getUsernameFromToken(String token) {
         return getClaimFromToken(token, Claims::getSubject);
-    }
-
-    public String getUserNameFromTokenRaw(String rawToken) {
-        return getClaimFromToken(rawToken.substring(7), Claims::getSubject);
     }
 
     public Date getExpirationDateFromToken(String token) {

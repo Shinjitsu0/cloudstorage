@@ -7,24 +7,22 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import ru.netology.demo.model.User;
+import ru.netology.demo.model.UserDB;
 
 @Repository
 @Transactional
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<UserDB, Long> {
 
-    User save(User user);
+    UserDB save(UserDB userDB);
 
-    UserDetails findByLogin(String login);
-
-    @Query("select u from User u where u.login = :login")
-    User findByLoginReturnUser(String login);
+    @Query("select u from UserDB u where u.login = :login")
+    UserDB findByLoginReturnUserDB(String login);
 
     @Modifying
-    @Query("update User u set u.token = :token where u.login = :login")
+    @Query("update UserDB u set u.token = :token where u.login = :login")
     void addTokenToUser(String login, String token);
 
     @Modifying
-    @Query("update User u set u.token = null where u.login=:username")
+    @Query("update UserDB u set u.token = null where u.login=:username")
     void deleteTokenByUsername(String username);
 }

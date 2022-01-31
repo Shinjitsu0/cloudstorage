@@ -19,11 +19,11 @@ public interface FileRepository extends JpaRepository<IncomingFile, Long> {
 
     Optional<IncomingFile> findByFilename(String filename);
 
-    @Query("select files from IncomingFile files where files.user.login = :username")
+    @Query("select files from IncomingFile files where files.userDB.login = :username")
     List<IncomingFile> findAllFilesByUsername(String username);
 
     @Modifying
-    @Query("delete from IncomingFile file where file.filename = :filename and file.user.login = :username")
+    @Query("delete from IncomingFile file where file.filename = :filename and file.userDB.login = :username")
     void deleteByFilename(String filename, String username);
 
     @Modifying

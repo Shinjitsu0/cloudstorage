@@ -31,6 +31,6 @@ public class IncomingFile {
     @Lob
     private byte[] fileContent;
     @ManyToOne(cascade = CascadeType.ALL)
-    private User user;
+    private UserDB userDB;
 }
 
